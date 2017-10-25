@@ -16,8 +16,8 @@ if [ "$1" = 'server' ]; then
     --rm \
     -e "MOJO_MODE=$MOJO_MODE" \
     -p 3000:3000 \
-    --name terms_and_conditions_as_a_service_poc-server \
-    terms_and_conditions_as_a_service_poc-server \
+    --name tac_as_poc-server \
+    tac_as_poc-server \
     server
 
 elif [ "$1" = 'ci' ]; then
@@ -32,8 +32,8 @@ elif [ "$1" = 'ci' ]; then
     --rm \
     -e "MOJO_MODE=$MOJO_MODE" \
     -e "TEST_VERBOSE=$TEST_VERBOSE" \
-    --name terms_and_conditions_as_a_service_poc-ci \
-    terms_and_conditions_as_a_service_poc-ci \
+    --name tac_as_poc-ci \
+    tac_as_poc-ci \
     ci
 
 elif [ "$1" = 'unittest' ]; then
@@ -48,8 +48,8 @@ elif [ "$1" = 'unittest' ]; then
     -e "TEST_VERBOSE=$TEST_VERBOSE" \
     -e "TEST_METHOD=$TEST_METHOD" \
     -it \
-    --name terms_and_conditions_as_a_service_poc-unittest \
-    terms_and_conditions_as_a_service_poc-unittest \
+    --name tac_as_poc-unittest \
+    tac_as_poc-unittest \
     unittest
 
 elif [ "$1" = 'shell' ]; then
@@ -58,7 +58,7 @@ elif [ "$1" = 'shell' ]; then
     docker run \
     --rm \
     --name howismyperl-shell \
-    -it terms_and_conditions_as_a_service_poc-server \
+    -it tac_as_poc-server \
     shell
 
 else
