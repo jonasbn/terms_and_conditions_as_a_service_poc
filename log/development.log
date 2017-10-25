@@ -1,5 +1,0 @@
-[Wed Oct 25 21:29:46 2017] [debug] GET "/"
-[Wed Oct 25 21:29:47 2017] [debug] Routing to controller "TAC::Controller" and action "default"
-[Wed Oct 25 21:29:47 2017] [debug] Rendering template "controller/default.html.ep"
-[Wed Oct 25 21:29:47 2017] [debug] Rendering template "layouts/default.html.ep"
-[Wed Oct 25 21:29:47 2017] [debug] 200 OK (0.378729s, 2.640/s)
