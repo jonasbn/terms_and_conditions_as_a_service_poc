@@ -3,7 +3,7 @@ package TAC::Controller;
 use Mojo::Base 'Mojolicious::Controller';
 use Data::Dumper;
 use Time::Local;
-use POSIX qw(locale_h);
+use POSIX qw(locale_h strftime);
 use TryCatch;
 use HTTP::Status qw(HTTP_NOT_FOUND);
 
@@ -25,7 +25,7 @@ sub terms_and_conditions_by_revision {
     my $self = shift;
 
     my $language = $self->stash('i18n')->{language};
-    my $revision_parameter = $self->stash('revision') || LATEST_REVISION;
+    my $revision_parameter = $self->stash('revision');
 
     $self->app->log->debug("Called with language: »$language«");
     $self->app->log->debug("Called with revision: »$revision_parameter«");
@@ -57,20 +57,25 @@ sub terms_and_conditions_by_date {
     my $self = shift;
 
     my $language = $self->stash('i18n')->{language};
-    my $date = $self->stash('date') || time;
+    my $date = $self->stash('date') || '';
 
     $self->app->log->debug("Called with language: »$language«");
-    $self->app->log->debug("Called with date: »$language«");
+    $self->app->log->debug("Called with date: »$date«");
 
-    my $date_parameter;
+    # We default to today
+    if (not $date) {
+        $date = strftime "%Y%m%e", localtime;
+    }
+
+    my $date_epoch;
     my $terms_and_conditions = $self->config('terms_and_conditions');
 
     if ($date) {
-        $self->app->log->info("Attempting to parse date parameter: $date");
+        $self->app->log->info("Attempting to parse date: $date");
 
-        $date_parameter = $self->_parse_and_convert_date($date);
+        $date_epoch = $self->_parse_and_convert_date($date);
 
-        if (not $date_parameter) {
+        if (not $date_epoch) {
             $self->app->log->error("Illegal date provided: $date");
 
             $self->render('controller/default',
@@ -81,7 +86,7 @@ sub terms_and_conditions_by_date {
     }
 
     # We do not service general terms and conditions prior to revision 03 from 20070701
-    if ($date_parameter and $date_parameter < OLDEST_DATE_SERVED) {
+    if ($date_epoch and $date_epoch < OLDEST_DATE_SERVED) {
         $self->app->log->error("Date: $date, is in the past");
         $self->render(
             status => HTTP_NOT_FOUND,
@@ -96,11 +101,11 @@ sub terms_and_conditions_by_date {
         $self->app->log->debug('Evaluating the revision start date:', $revision_start_date);
         if ($asset) {
             $self->app->log->debug('We have an asset');
-            if ($date_parameter and $revision_start_date > $date_parameter) {
+            if ($date_epoch and $revision_start_date > $date_epoch) {
                 $self->app->log->debug('Our date parameter is below the revision start date');
                 next;
-            } elsif ($date_parameter and $revision_start_date < $date_parameter
-                     and $asset->{startdate} > $date_parameter ) {
+            } elsif ($date_epoch and $revision_start_date < $date_epoch
+                     and $asset->{startdate} > $date_epoch ) {
 
                 $self->app->log->debug('Setting asset to start date', $revision_start_date);
                 $asset = $terms_and_conditions->{$revision_start_date};
