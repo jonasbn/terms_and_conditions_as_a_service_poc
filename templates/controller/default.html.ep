@@ -1,0 +1,10 @@
+% layout 'default';
+<h1><%=l 'title' %></h1>
+
+<a href="<%=l 'inverted_language_value' %>"><%=l 'inverted_language_label' %></a>
+
+<ul>
+<% foreach my $revision (sort {$b <=> $a} (keys %{$terms_and_conditions})) { %>
+    <li><a target="_blank" href="/<%=l 'language_value' %>/terms_and_conditions/revision/<%= $terms_and_conditions->{$revision}->{revision} %>"><%=l 'terms_and_conditions_revision_label' %> <%= $terms_and_conditions->{$revision}->{revision} %></a>
+<% } %>
+</ul>

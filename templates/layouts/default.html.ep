@@ -1,0 +1,5 @@
+<!DOCTYPE html>
+<html>
+  <head><title><%=l 'title' %></title></head>
+  <body><%= content %></body>
+</html>
