@@ -57,7 +57,7 @@ elif [ "$1" = 'shell' ]; then
     # shell
     docker run \
     --rm \
-    --name howismyperl-shell \
+    --name tac_as_poc-shell \
     -it tac_as_poc \
     shell
 
