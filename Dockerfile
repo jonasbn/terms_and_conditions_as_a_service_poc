@@ -6,7 +6,7 @@ RUN cpanm Carton
 WORKDIR /usr/src/app
 COPY cpanfile.snapshot /usr/src/app
 COPY cpanfile /usr/src/app
-RUN carton
+RUN carton install
 
 COPY . /usr/src/app
 

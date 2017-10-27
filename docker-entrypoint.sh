@@ -8,7 +8,7 @@ cd /usr/src/app
 
 if [ "$1" = 'server' ]; then
 
-    carton exec -- morbo \
+    carton exec -- perl ./local/bin/morbo \
     --verbose \
     --watch lib \
     --watch script \
