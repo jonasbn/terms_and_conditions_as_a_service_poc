@@ -1,4 +1,4 @@
-# README for Terms and Conditions as a Service Proof of Concept
+# Terms and Conditions as a Service Proof of Concept
 _- aka `tac_as_poc`_
 
 # Table of Contents
