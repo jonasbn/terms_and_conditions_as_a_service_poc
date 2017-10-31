@@ -98,7 +98,7 @@ sub terms_and_conditions_by_date {
     my $asset;
 
     foreach my $revision_start_date ( keys %{$terms_and_conditions}) {
-        $self->app->log->debug('Evaluating the revision start date:', $revision_start_date);
+        $self->app->log->debug('Evaluating the revision start date: '. $revision_start_date);
         if ($asset) {
             $self->app->log->debug('We have an asset');
             if ($date_epoch and $revision_start_date > $date_epoch) {
@@ -107,18 +107,18 @@ sub terms_and_conditions_by_date {
             } elsif ($date_epoch and $revision_start_date < $date_epoch
                      and $asset->{startdate} > $date_epoch ) {
 
-                $self->app->log->debug('Setting asset to start date', $revision_start_date);
+                $self->app->log->debug('Setting asset to start date: '. $revision_start_date);
                 $asset = $terms_and_conditions->{$revision_start_date};
 
             } elsif ($asset->{startdate} > $revision_start_date) {
                 $self->app->log->debug('Asset start date higher than revision start date');
                 next;
             } else {
-                $self->app->log->debug('Setting asset to start date', $revision_start_date);
+                $self->app->log->debug('Setting asset to start date: '. $revision_start_date);
                 $asset = $terms_and_conditions->{$revision_start_date};
             }
         } else {
-            $self->app->log->debug('Setting asset to start date', $revision_start_date);
+            $self->app->log->debug('Setting asset to start date: '. $revision_start_date);
             $asset = $terms_and_conditions->{$revision_start_date}; # first run
         }
     }
