@@ -170,6 +170,8 @@ http://localhost:3000
 <a name="development"></a>
 # Development
 
+Please see the [contribution guidelines](CONTRIBUTING.md).
+
 <a name="license"></a>
 # License 
 
