@@ -20,7 +20,6 @@ _- aka `tac_as_poc`_
 - [Operations](#operations)
 	- [carton](#carton)
 	- [Docker](#docker)
-- [Downloads](#downloads)
 - [Development](#development)
 - [License](#license)
 
@@ -121,12 +120,14 @@ Example:
 <a name="installation"></a>
 # Installation
 
+If you want to run the application via **Docker** you can skip the installation section and go directly to [Operations](#operations).
+
 <a name="requirements"></a>
 ## Requirements
 
 The service requires **Perl**
 
-Please see the `cpanfile` for the required dependencies.
+Please see the `cpanfile` for the required **Perl** dependencies.
 
 <a name="operations"></a>
 # Operations
@@ -134,7 +135,7 @@ Please see the `cpanfile` for the required dependencies.
 <a name="carton"></a>
 ## carton
 
-The service can be run with/without **Docker**, for **Docker** see further down.
+The service can be run wit or without **Docker**, for **Docker** see further down.
 
 ```shell
 $ carton exec -- morbo script/tac
@@ -149,23 +150,30 @@ http://localhost:3000
 
 The **Docker** image can be run in 3 modes:
 
-- server
-- ci
-- unittest
-- shell
+- `server`
+- `ci`
+- `unittest`
+- `shell`
 
-```shell
+If you build locally based on the GitHub repository.
+
+```bash
 $ ./docker-run.sh «mode»
 ```
 
-Server is the primary mode, which simply starts a webserver, which can be accessed on the address:
+`server` is the primary mode, which simply starts a webserver, which can be accessed via the address:
+
+### Docker Hub
+
+If you want to run it via **Docker Hub** (in server mode)
+
+```bash
+$ docker run jonasbn/tac_as_poc 
+```
 
 ```
 http://localhost:3000
 ```
-
-<a name="downloads"></a>
-# Downloads
 
 <a name="development"></a>
 # Development
