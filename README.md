@@ -56,35 +56,67 @@ The prototype service offer the following:
 
 <a name="get-current-terms-and-conditions-by-default-language"></a>
 ## get current terms and conditions by default language
-/terms_and_conditions
+
+    /terms_and_conditions
 
 <a name="get-current-terms-and-conditions-by-language"></a>
 ## get current terms and conditions by language
-/:language/terms_and_conditions
+
+    /:language/terms_and_conditions
+
+Example:
+
+    /en/terms_and_conditions
 
 <a name="get-terms-and-conditions-by-default-language-and-date"></a>
 ## get terms and conditions by default language and date
-/terms_and_conditions/:date
+
+    /terms_and_conditions/:date
+
+Example:
+
+    /terms_and_conditions/20171208
 
 <a name="get-terms-and-conditions-by-language-and-date"></a>
 ## get terms and conditions by language and date
-/:language/terms_and_conditions/:date
+
+    /:language/terms_and_conditions/:date
+
+Example:
+
+    /en/terms_and_conditions/20171208
 
 <a name="get-terms-and-conditions-by-default-language-and-revision"></a>
 ## get terms and conditions by default language and revision
-/terms_and_conditions/revision/:revision
+
+    /terms_and_conditions/revision/:revision
+
+Example:
+
+    /terms_and_conditions/revision/5
 
 <a name="get-terms-and-conditions-by-language-and-revision"></a>
 ## get terms and conditions by language and revision
-/:language/terms_and_conditions/revision/:revision
+
+    /:language/terms_and_conditions/revision/:revision
+
+Example:
+
+    /en/terms_and_conditions/revision/5
 
 <a name="get-default-page"></a>
 ## get default page
-/
+
+    /
 
 <a name="get-default-page-by-language"></a>
 ## get default page by language
-/:language
+
+    /:language
+
+Example:
+
+    /da
 
 <a name="installation"></a>
 # Installation
