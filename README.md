@@ -151,6 +151,7 @@ http://localhost:3000
 The **Docker** image can be run in 3 modes:
 
 - `server`
+- `localserver`
 - `ci`
 - `unittest`
 - `shell`

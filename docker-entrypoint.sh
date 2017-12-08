@@ -9,6 +9,11 @@ cd /usr/src/app
 if [ "$1" = 'server' ]; then
 
     carton exec -- perl ./local/bin/morbo \
+    --listen http://*:3000 ./script/tac
+
+elif [ "$1" = 'localserver' ]; then
+
+    carton exec -- perl ./local/bin/morbo \
     --verbose \
     --watch lib \
     --watch script \
