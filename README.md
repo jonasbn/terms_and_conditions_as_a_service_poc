@@ -151,7 +151,6 @@ http://localhost:3000
 The **Docker** image can be run in 3 modes:
 
 - `server`
-- `localserver`
 - `ci`
 - `unittest`
 - `shell`
@@ -162,15 +161,21 @@ If you build locally based on the GitHub repository.
 $ ./docker-run.sh «mode»
 ```
 
-`server` is the primary mode, which simply starts a webserver, which can be accessed via the address:
+`server` is the primary and default mode, which simply starts a webserver, which can be accessed via the address:
+
+```
+http://localhost:3000
+```
 
 ### Docker Hub
 
 If you want to run it via **Docker Hub** (in server mode)
 
 ```bash
-$ docker run jonasbn/tac_as_poc 
+$ docker run --rm -p 3000:3000 jonasbn/tac_as_poc server
 ```
+
+Which simply starts a webserver, which can be accessed via the address:
 
 ```
 http://localhost:3000
