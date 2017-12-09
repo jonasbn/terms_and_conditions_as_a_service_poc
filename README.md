@@ -172,7 +172,7 @@ http://localhost:3000
 If you want to run it via **Docker Hub** (in server mode)
 
 ```bash
-$ docker run --rm -p 3000:3000 jonasbn/tac_as_poc server
+$ docker run --rm -p 3000:3000 jonasbn/tac_as_poc
 ```
 
 Which simply starts a webserver, which can be accessed via the address:
