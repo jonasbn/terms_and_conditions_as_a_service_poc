@@ -1,5 +1,5 @@
 FROM perl:5.26
-MAINTAINER jonasbn
+LABEL maintainer="jonasbn"
 
 # For tagging of the Docker image, so it can refer back to the actual
 # implementation code base
