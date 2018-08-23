@@ -3,7 +3,7 @@
 ## 0.0.2 2018-08-23 Bug fix release, update recommended
 
 - Docker image extended with USER directive to address potential 
-  security issue
+  security issue [#1]
 
 ## 0.0.1 2017-12-09 Feature release
 
