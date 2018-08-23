@@ -20,4 +20,7 @@ COPY . /usr/src/app
 EXPOSE 3000
 
 COPY ./docker-entrypoint.sh /
+
+USER nobody
+
 ENTRYPOINT ["/docker-entrypoint.sh"]
