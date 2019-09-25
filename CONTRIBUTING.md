@@ -31,7 +31,7 @@ For other coding conventions please see the Perl::Critic configuration in: `t/pe
 
 And if you are really adventurous, you are most welcome to read [my general coding conventions](https://gist.github.com/jonasbn/c2f703c68340384cfc61bb9c38adb2ff) (WIP).
 
-Do note that the repository uses [propot](https://probot.github.io/), The [`TODO bot`](https://probot.github.io/apps/todo/) will the create a GitHub issue automatically upon `push` to the repository if the guidelines are followed.
+Do note that the repository uses [probot](https://probot.github.io/), The [`TODO bot`](https://probot.github.io/apps/todo/) will the create a GitHub issue automatically upon `push` to the repository if the guidelines are followed.
 
 All contributions are welcome and most will be accepted.
 
