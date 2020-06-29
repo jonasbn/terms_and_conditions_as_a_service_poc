@@ -3,7 +3,7 @@ package TAC;
 use Mojo::Base 'Mojolicious';
 use POSIX qw(tzset);
 
-our $VERSION = '0.0.1';
+our $VERSION = '0.2.0';
 
 # This method will run once at server start
 sub startup {
