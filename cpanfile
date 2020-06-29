@@ -1,6 +1,6 @@
 requires 'Mojolicious';
 requires 'Time::Local';
-requires 'TryCatch';
+requires 'Try::Tiny';
 requires 'Mojolicious::Plugin::Config';
 requires 'Mojolicious::Plugin::I18N';
 requires 'HTTP::Status';
