@@ -3,6 +3,11 @@
 ## 0.2.0 2020-06-29 Maintenance release, update not required
 
 - dependabot created PR for updating perl in `Dockerfile` from 5.30.3 to 5.32.0
+- Moved App::Prove::Watch to development recommendation instead of distribution dependency
+- Exchanged TryCatch for Try::Tiny, since Devel::Declare has been deprecated
+- Bumped Mojolicious dependency in `cpanfile.snapshot` from 7.03 to 8.56
+- Exchanged regular Perl base image for a _slim_ version (5.32.0-slim)
+- Corrected `Dockerfile` to build using `cpanfile.snapshot` instead of `cpanfile`
 
 ## 0.1.0 2020-06-06 Maintenance release, update not required
 
