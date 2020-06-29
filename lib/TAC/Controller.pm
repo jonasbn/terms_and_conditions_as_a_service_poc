@@ -4,7 +4,7 @@ use Mojo::Base 'Mojolicious::Controller';
 use Data::Dumper;
 use Time::Local;
 use POSIX qw(locale_h strftime);
-use TryCatch;
+use Try::Tiny;
 use HTTP::Status qw(HTTP_NOT_FOUND);
 
 use constant LATEST_REVISION    => 9;
@@ -165,8 +165,8 @@ sub _parse_and_convert_date {
         # We ignore time
         $epoch = timelocal( 0, 0, 0, $day, $month, $year );
 
-    } catch ($exception) {
-        $self->app->log->error('Unable to parse and convert the provided date', $exception);
+    } catch  {
+        $self->app->log->error('Unable to parse and convert the provided date', $_);
 
         return undef;
     };
