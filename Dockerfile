@@ -1,4 +1,4 @@
-FROM perl:5.32.0
+FROM perl:5.32.0-slim
 LABEL maintainer="jonasbn"
 
 # For tagging of the Docker image, so it can refer back to the actual
@@ -13,7 +13,7 @@ RUN cpanm Carton
 WORKDIR /usr/src/app
 COPY cpanfile.snapshot /usr/src/app
 COPY cpanfile /usr/src/app
-RUN carton install
+RUN carton install --deployment
 
 COPY . /usr/src/app
 
