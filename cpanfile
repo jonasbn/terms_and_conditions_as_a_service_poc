@@ -12,3 +12,7 @@ on test => sub {
     requires 'File::Find';
     requires 'File::Spec';
 };
+
+on 'develop' => sub {
+    recommends 'App::Prove::Watch';
+};
