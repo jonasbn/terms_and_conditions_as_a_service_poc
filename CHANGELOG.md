@@ -1,5 +1,9 @@
 # Change log for Terms and Conditions as a service POC
 
+## 0.3.0 2021-02-08 Maintenance release, update not required
+
+- dependabot created PR for updating perl in `Dockerfile` from 5.32.0 to 5.32.1
+
 ## 0.2.0 2020-06-29 Maintenance release, update not required
 
 - dependabot created PR for updating perl in `Dockerfile` from 5.30.3 to 5.32.0
