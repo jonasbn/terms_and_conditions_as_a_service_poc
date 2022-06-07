@@ -1,4 +1,4 @@
-FROM perl:5.34.1-slim
+FROM perl:5.36.0-slim
 LABEL maintainer="jonasbn"
 
 # For tagging of the Docker image, so it can refer back to the actual
