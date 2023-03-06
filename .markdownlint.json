@@ -1,0 +1,10 @@
+{
+    "root": true,
+    "default": true,
+    "line-length": false,
+    "commands-show-output": false,
+    "blanks-around-headings": false,
+    "single-title": false,
+    "no-inline-html": false,
+    "code-block-style": false
+}

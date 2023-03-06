@@ -5,21 +5,24 @@ _- aka `tac_as_poc`_
 
 <!-- MarkdownTOC -->
 
+- [Terms and Conditions as a Service Proof of Concept](#terms-and-conditions-as-a-service-proof-of-concept)
+- [Table of Contents](#table-of-contents)
 - [Introduction](#introduction)
 - [Services](#services)
-	- [get current terms and conditions by default language](#get-current-terms-and-conditions-by-default-language)
-	- [get current terms and conditions by language](#get-current-terms-and-conditions-by-language)
-	- [get terms and conditions by default language and date](#get-terms-and-conditions-by-default-language-and-date)
-	- [get terms and conditions by language and date](#get-terms-and-conditions-by-language-and-date)
-	- [get terms and conditions by default language and revision](#get-terms-and-conditions-by-default-language-and-revision)
-	- [get terms and conditions by language and revision](#get-terms-and-conditions-by-language-and-revision)
-	- [get default page](#get-default-page)
-	- [get default page by language](#get-default-page-by-language)
+  - [get current terms and conditions by default language](#get-current-terms-and-conditions-by-default-language)
+  - [get current terms and conditions by language](#get-current-terms-and-conditions-by-language)
+  - [get terms and conditions by default language and date](#get-terms-and-conditions-by-default-language-and-date)
+  - [get terms and conditions by language and date](#get-terms-and-conditions-by-language-and-date)
+  - [get terms and conditions by default language and revision](#get-terms-and-conditions-by-default-language-and-revision)
+  - [get terms and conditions by language and revision](#get-terms-and-conditions-by-language-and-revision)
+  - [get default page](#get-default-page)
+  - [get default page by language](#get-default-page-by-language)
 - [Installation](#installation)
-	- [Requirements](#requirements)
+  - [Requirements](#requirements)
 - [Operations](#operations)
-	- [carton](#carton)
-	- [Docker](#docker)
+  - [carton](#carton)
+  - [Docker](#docker)
+    - [Docker Hub](#docker-hub)
 - [Development](#development)
 - [License](#license)
 
@@ -141,7 +144,7 @@ The service can be run wit or without **Docker**, for **Docker** see further dow
 $ carton exec -- morbo script/tac
 ```
 
-```
+```text
 http://localhost:3000
 ```
 
@@ -163,7 +166,7 @@ $ ./docker-run.sh «mode»
 
 `server` is the primary and default mode, which simply starts a webserver, which can be accessed via the address:
 
-```
+```text
 http://localhost:3000
 ```
 
@@ -177,7 +180,7 @@ $ docker run --rm -p 3000:3000 jonasbn/tac_as_poc
 
 Which simply starts a webserver, which can be accessed via the address:
 
-```
+```text
 http://localhost:3000
 ```
 
@@ -187,6 +190,6 @@ http://localhost:3000
 Please see the [contribution guidelines](CONTRIBUTING.md).
 
 <a name="license"></a>
-# License 
+# License
 
 The software is provided under the MIT license, please see the separate license file.

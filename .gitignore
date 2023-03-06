@@ -36,3 +36,4 @@ inc/
 
 # Carton files
 local
+.github/config/spellcheck-wordlist.txt
