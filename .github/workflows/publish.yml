@@ -34,8 +34,7 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: |
-            jonasbn/ebirah:latest
-            ghcr.io/jonasbn/ebirah:latest
+            jonasbn/tac_as_poc:latest
       -
         name: Docker Hub Description
         uses: peter-evans/dockerhub-description@v3
