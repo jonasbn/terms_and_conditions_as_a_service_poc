@@ -1,6 +1,10 @@
 # Terms and Conditions as a Service Proof of Concept
 _- aka `tac_as_poc`_
 
+> [!IMPORTANT]
+> This is a prototype and proof of concept, not intended for production use.
+> It has been archived and is no longer actively maintained.
+
 # Table of Contents
 
 <!-- MarkdownTOC -->
